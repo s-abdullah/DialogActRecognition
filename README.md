@@ -13,7 +13,8 @@ The following here feature sets were extracted from the data
 1. Unigram Features
 2. Parts of Speech Tags
 3. Custom Features
-Unigram Features
+
+#### Unigram Features
 These features were extracted using sklearn and NLTK. First the corpus was created by extracted all of
 the clean text. Then ngrams function from NLTK was used to create the unigrams and their frequency. A
 threshold of 100 was set and any word with frequency below 100 was dismissed. Next CountVectorizer
@@ -24,7 +25,9 @@ as unigramFeatures.csv and unigramFeaturesTest.csv and the code is in unigramFea
 The motivation for this feature set was that there would be certain words that have a higher frequency
 in certain dialog acts. For example, the “ny” act which yes-no-question would have high frequency of yes
 or no words as compared to “sd” which is statement-non-opinion tag which might not have these
-words.Part of Speech Features
+words.
+
+#### Part of Speech Features
 These features were also extracted using sklearn and NLTK. Again, the corpusof clean text was extracted
 but tokenized using NLTK token function and then pos_tag method was used to get the POS tags. Then
 CountVectorizer was used to create a vocabulary of these POS tags. Then this vocabulary was used to
@@ -34,7 +37,7 @@ The motivation behind this was that these features will differentiate a lot betw
 “aa” that are yes-no question and affirmative action and acts such as “sd” and “sv” which are statement-
 non-opinion and statement-opinion. The motivation being that the latter would contain a lot more
 nouns than the former.
-Custom features
+#### Custom features
 These features are handmade features for this specific data. Only sklearn and NLTK was used for this.
 Sklearn learn was used to create a vocabulary of non-verbals that were extracted in data preprocessing,
 which gave a set of 58 features. Along with this, simple python was used to create a further 16 features.
