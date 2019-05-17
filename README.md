@@ -4,7 +4,9 @@
 Before the features could be extracted, the data was preprocessed. The 11 most frequent tags were
 extracted using Pandas and then the “+” tag was removed because it did not have any explanation. The
 final tags included in the data were:
+
 ['sd', 'b', 'sv', '%', 'aa', 'ba', 'qy', 'x', 'ny', 'fc']
+
 Furthermore, the raw data was also preprocessed to remove fillers and non-verbals. New column of
 Clean text with only words was created and a filler column with the filler types and an action column
 with the nonverbals as well. This code is in process.ipynb and the file created is TopTenTrain.csv with
