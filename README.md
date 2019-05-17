@@ -50,3 +50,16 @@ custom.ipynb.
 The motivation behind these features was to capture non lexical properties of the conversation. Some
 acts such as “x” were only nonverbals with no text. Furthermore fillers are indicative of difficult question
 or that the person is thinking (filled pause) which might correspond to “sv” statement-opinion tags.
+
+
+
+## Classification
+For the purpose of classification, I used logistic regression from sklearn, the solver was liblinear and the
+classification was binary. For training of the classifier with all the 4 feature sets, the iterations were
+increased from 1000 to 5000 due to warnings, otherwise it was same for all the rest.
+Following are the results:
+
+Overall the best performance (0.957129) was given by the classifier with all the four feature sets.
+Without using the LIWC features, the combination of all the 3 features gave the best performance of
+0.955923. Out of my feature sets alone, the one that used the unigram features was the best with a
+performance of 0.947023.
