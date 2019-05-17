@@ -65,3 +65,39 @@ Overall the best performance (0.957129) was given by the classifier with all the
 Without using the LIWC features, the combination of all the 3 features gave the best performance of
 0.955923. Out of my feature sets alone, the one that used the unigram features was the best with a
 performance of 0.947023.
+
+
+## Error Analysis
+### Easiest Classes
+The easiest classes to predict were “fc” (Conventional-closing) “x” (Non-verbal) and “qy” (Yes-No-
+Question), all with an accuracy of 0.99.
+In case of “x” since it is very easy to identify because it will always have non-verbals and because the
+custom features included non-verbals as a feature therefore it was easy to discriminate against all the
+other classes.
+In case of “qy” since it is easy to identify because yes and no unigrams together with custom features
+like having “?” symbols really separate it from other classes and hence easy to classify.
+Incase of “fc”, I believe it was easy to classify because I believe that this class will mostly have the
+unigram “you” in it which will help distinguish from other class which do not necessitate the inclusion of
+this world. It will probably have “you” because one addresses the other person when closing the
+conversation (unless it’s a hang up).
+### Hardest Classes
+The hardest classes to predict were “sd” (Statement-non-opinion) and “sv” (Statement-opinion), both of
+an accuracy below 0.9.
+In both these cases they are statements that may involve a lot of words. Furthermore, it is really hard to
+distinguish if something said is opinionated or not especially if the people talking are subtle. Hence, I
+believe the low accuracy of these classes are because of the difficulty of telling them part from each
+other and not other classes.
+Common Errors
+Judging form the confusion matrices I believe that the classifier had difficulty in the following classes: sd,
+sv, b, aa. As stated above, opinionated statements are hard to detect hence there might be confusion
+between sd and sv classes. Furthermore, I believe there was confusion between b and aa class because
+the appreciation can sometimes be hard to distinguish from agreement (in real life and by machines as
+well)
+Otherwise all the rest of the classes had fairly low true false negative and false positives.
+### Improvements
+To improve “sd” and “sv” classification, we can further use bigram feature because I hypothesize that “I
+am ” would occur more in “sd” and “I think” would occur more in “sv”, as it is an easy way to seeing if
+something is opinionated or not.
+Another improvement should be the placement of certain words in the text. Example if “Yes” is in the
+start then that might indicate “qy” (yes-no-question) but if it is somewhere else then it might indicate
+“aa” (affirmative agreement). So, parse trees and word location will further improve the accuracies.
