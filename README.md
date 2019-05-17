@@ -1,6 +1,6 @@
 # Dialog Act Recognition
-Feature Description
-Data Preprocessing
+## Feature Description
+### Data Preprocessing
 Before the features could be extracted, the data was preprocessed. The 11 most frequent tags were
 extracted using Pandas and then the “+” tag was removed because it did not have any explanation. The
 final tags included in the data were:
