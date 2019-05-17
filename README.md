@@ -59,6 +59,8 @@ classification was binary. For training of the classifier with all the 4 feature
 increased from 1000 to 5000 due to warnings, otherwise it was same for all the rest.
 Following are the results:
 
+![alt text](https://github.com/s-abdullah/DialogActRecognition/blob/master/images/table.png)
+
 Overall the best performance (0.957129) was given by the classifier with all the four feature sets.
 Without using the LIWC features, the combination of all the 3 features gave the best performance of
 0.955923. Out of my feature sets alone, the one that used the unigram features was the best with a
